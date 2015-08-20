@@ -16,4 +16,4 @@
 # RubyMine files
 .idea/
 
-spring/
+spring/*.pid
