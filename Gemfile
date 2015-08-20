@@ -42,11 +42,12 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  gem 'spring', '1.1.3'
 end
 
 
 group :test do
+  gem 'guard'
   gem 'minitest-reporters'
   gem 'mini_backtrace', '0.1.3'
   gem 'guard-minitest'
