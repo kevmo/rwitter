@@ -1,8 +1,10 @@
 class User < ActiveRecord::Base
 
-  attr_accessor :name, :email, :updated_at, :created_at
+  VALID_EMAIL_REGEX = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
 
-  def initialize
-  end
+  validates(:name, presence: true, length: {maximum: 50})
+  validates(:email, presence: true, length: {maximum: 255},
+            format: {with: VALID_EMAIL_REGEX},
+            uniqueness: {case_sensitive: false})
 
 end
